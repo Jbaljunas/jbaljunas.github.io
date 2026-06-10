@@ -1,5 +1,19 @@
 ---
 title: "Welcome!"
-format: html
+format: 
+  html:
+    css: styles.css
+    page-layout: full
 ---
 
+:::: {.columns}
+
+::: {.column width="30%"}
+![](images/Bio_pic.JPG){width=200px}
+:::
+
+::: {.column width="70%"}
+
+<h3>My name is Jenna Baljunas, and I study community ecology!</h3>
+\
+Currently, I am a PhD student in the [Spatial and Community Ecology (SpaCE) Lab](https://www.communityecologylab.com/) at Michigan State University.
