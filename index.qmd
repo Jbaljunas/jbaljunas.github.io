@@ -9,7 +9,7 @@ format:
 :::: {.columns}
 
 ::: {.column width="30%"}
-![](images/Bio_pic.JPG){width=250px}
+![Portrait photographed by Dustin Angell](images/Bio_pic.JPG){width=250px}
 :::
 
 ::: {.column width="70%"}
@@ -33,10 +33,33 @@ Currently, I am a PhD student in the [Spatial and Community Ecology (SpaCE) Lab]
 :::
 ::::
 
-<div>
-
 ::: {style="text-align:center"}
 <h2>I am interested in how species interact with each other and the environment around them.</h2>
-
-
 :::
+
+<div style="
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background:
+    linear-gradient(to left,
+      rgba(0,0,0,0.95) 0%,
+      rgba(0,0,0,0.75) 30%,
+      rgba(0,0,0,0.2) 60%,
+      rgba(0,0,0,0) 100%),
+    url('images/snake2.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 50px;
+">
+
+<div style="
+  max-width: 40%;
+  color: white;
+  text-align: left;
+">
+
+My research explores the drivers of community change across spatial and temporal scales. I enjoy working with multiple taxonomic groups and 
