@@ -13,12 +13,10 @@ format:
 :::
 
 ::: {.column width="70%"}
-
+::: {style="text-align:center"}
 <h3>My name is Jenna Baljunas, and I study community ecology!</h3>
 \
 Currently, I am a PhD student in the [Spatial and Community Ecology (SpaCE) Lab](https://www.communityecologylab.com/) at Michigan State University and a part of the [Department of Integrative Biology](https://integrativebiology.natsci.msu.edu/) and [Ecology, Evolution, and Behavior program](https://eeb.msu.edu/).
-\
-
 
 <div class="image-row">
 
@@ -31,5 +29,14 @@ Currently, I am a PhD student in the [Spatial and Community Ecology (SpaCE) Lab]
   </a>
 
 </div>
+:::
+:::
+::::
 
+<div>
 
+::: {style="text-align:center"}
+<h3>Particularly, I am interested in how communities change in response to environmental change.</h3>
+\
+My dissertation research focuses on the effects of climate change on tropical communities. 
+:::
