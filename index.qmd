@@ -16,7 +16,9 @@ format:
 
 <h3>My name is Jenna Baljunas, and I study community ecology!</h3>
 \
-Currently, I am a PhD student in the [Spatial and Community Ecology (SpaCE) Lab](https://www.communityecologylab.com/) at Michigan State University, part of the Department of Integrative Biology and Ecology, Evolution, and Behavior program.
+Currently, I am a PhD student in the [Spatial and Community Ecology (SpaCE) Lab](https://www.communityecologylab.com/) at Michigan State University and a part of the Department of Integrative Biology and Ecology, Evolution, and Behavior program.
+
+
 
 <div class="image-row">
 
@@ -29,3 +31,5 @@ Currently, I am a PhD student in the [Spatial and Community Ecology (SpaCE) Lab]
   </a>
 
 </div>
+
+
