@@ -9,13 +9,13 @@ format:
 :::: {.columns}
 
 ::: {.column width="30%"}
-![](images/Bio_pic.JPG){width=200px}
+![](images/Bio_pic.JPG){width=250px}
 :::
 
 ::: {.column width="70%"}
 ::: {style="text-align:center"}
 <h3>**My name is Jenna Baljunas, and I study community ecology!**</h3>
-\
+
 Currently, I am a PhD student in the [Spatial and Community Ecology (SpaCE) Lab](https://www.communityecologylab.com/) at Michigan State University and a part of the [Department of Integrative Biology](https://integrativebiology.natsci.msu.edu/) and [Ecology, Evolution, and Behavior program](https://eeb.msu.edu/).
 
 <div class="image-row">
@@ -36,7 +36,7 @@ Currently, I am a PhD student in the [Spatial and Community Ecology (SpaCE) Lab]
 <div>
 
 ::: {style="text-align:center"}
-<h3>**Particularly, I am interested in how communities respond to environmental change.**</h3>
-\
-My dissertation research focuses on the effects of climate change on tropical communities. 
+<h3>**I am interested in how environmental change affects community structure and function, particularly in the tropics.**</h3>
+
+The interactions between species are among the fundamental drivers of tropical biodiversity. For my dissertation research, I am leveraging *species interaction networks* using occurrence, interaction, and trait data to quantify community change along a 2,900m elevational gradient in Costa Rica.
 :::
