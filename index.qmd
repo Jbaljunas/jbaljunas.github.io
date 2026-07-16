@@ -20,16 +20,14 @@ Currently, I am a PhD student in the [Spatial and Community Ecology (SpaCE) Lab]
 \
 
 
-
-
 <div class="image-row">
 
   <a href="https://integrativebiology.natsci.msu.edu/" target="_blank">
-    <img src="images/IBIO_logo.png" width="200">
+    <img src="images/IBIO_logo.png" width="100">
   </a>
 
   <a href="https://eeb.msu.edu/" target="_blank">
-    <img src="images/EEB_logo.jpg" width="200">
+    <img src="images/EEB_logo.jpg" width="100">
   </a>
 
 </div>
