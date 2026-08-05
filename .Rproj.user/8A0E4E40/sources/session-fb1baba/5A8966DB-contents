@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+  
+  
+website: 
+  title: "Jenna Baljunas"
+  site-url: https://jbaljunas.github.io/
+  navbar:
+    background: dark
+    left: 
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+        
+format:
+  html:
+    theme:
+      - minty
+    css: styles.css
