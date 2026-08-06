@@ -1,17 +1,17 @@
 const siteUrl = (
   import.meta.env.SITE_URL ||
   import.meta.env.PUBLIC_SITE_URL ||
-  "https://quietpages-eta.vercel.app"
+  "https://jbaljunas.github.io"
 ).replace(/\/$/, "");
 
 export const SITE = {
-  name: "Quiet Pages",
+  name: "Jenna Baljunas",
   description:
-    "An independent magazine on writing, design, and the slow web. Published occasionally, read closely.",
+  "PhD student studying species interactions, biodiversity, and community ecology in tropical forests at Michigan State University.",
   url: siteUrl,
   locale: "en-US",
   language: "en",
-  repositoryUrl: "https://github.com/andreialba/quietpages",
+  repositoryUrl: "https://github.com/Jbaljunas/jbaljunas.github.io",
 };
 
 export const NAVIGATION = [
