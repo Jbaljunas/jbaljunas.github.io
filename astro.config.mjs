@@ -6,7 +6,7 @@ const site =
   process.env.SITE_URL || process.env.PUBLIC_SITE_URL || "https://quietpages-eta.vercel.app";
 
 export default defineConfig({
-  site,
+  site: "https://jbaljunas.github.io",
   integrations: [mdx()],
   vite: {
     plugins: [tailwindcss()],
