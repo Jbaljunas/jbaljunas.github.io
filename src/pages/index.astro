@@ -31,7 +31,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
     <Image
       src={background}
       alt=""
-      class="absolute inset-0 h-full w-full object-cover object-center"
+      class="absolute inset-0 h-full w-full object-cover object-right"
       loading="eager"
       fetchpriority="high"
       decoding="async"
@@ -59,7 +59,12 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
         I study the structure and change of ecological communities
         </h1>
         <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/86">
-          Essays, field notes, and conversations &mdash; published occasionally, edited carefully, and meant to be read in a single sitting.
+          Currently, I am a PhD student in the 
+          <a
+            href={"https://www.communityecologylab.com/"}
+            class="group inline-flex items-center gap-2 border-b border-white pb-1 text-sm font-medium text-white hover:border-white/70 hover:text-white/82"
+          >
+            Spatial and Community Ecology (SpaCE) Lab
         </p>
         <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
           <a
