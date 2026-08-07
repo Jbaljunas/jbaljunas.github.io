@@ -5,6 +5,7 @@ import PostCard from "../components/PostCard.astro";
 import Newsletter from "../components/Newsletter.astro";
 import Icon from "../components/Icon.astro";
 import background from "../assets/howler2.JPG";
+import bio.pic from "../assets/Bio_pic.JPG"
 import {
   SITE,
   categories,
@@ -59,7 +60,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
         I study the structure and change of ecological communities
         </h1>
         <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/86">
-        Currently, I use species interactions to build species interaction networks in Costa Rica to understand how communities are responding to climate change.
+        Currently, I am using species interaction and occurrence data to build species interaction networks in Costa Rica to understand how communities are responding to climate change.
         </p>
         <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
           <a
@@ -85,7 +86,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
             {
               featured.thumbnail && (
                 <Image
-                  src={featured.thumbnail}
+                  src={bio.pic}
                   alt=""
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                   width={720}
