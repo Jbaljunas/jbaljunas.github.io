@@ -84,7 +84,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
         <a href={`/blog/${featured.slug}`} class="group block" aria-label={`Read ${featured.title}`}>
           <div class="aspect-[4/3] overflow-hidden rounded-md bg-muted">
             {
-              featured.thumbnail && (
+              bio.pic && (
                 <Image
                   src={bio.pic}
                   alt=""
