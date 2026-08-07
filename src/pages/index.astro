@@ -59,33 +59,15 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
         I study the structure and change of ecological communities
         </h1>
         <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/86">
-          Currently, I am a PhD student in the 
-        <a 
-              href="https://www.communityecologylab.com/"
-              class="group inline-flex items-center gap-2 border-b border-white pb-1 text-lg text-white hover:border-white/70 hover:text-white/82"
-            > Spatial and Community Ecology (SpaCE) Lab </a> at Michigan State University 
-          and a member of the 
-        <a 
-              href="https://integrativebiology.natsci.msu.edu/"
-              class="group inline-flex items-center gap-2 border-b border-white pb-1 text-lg text-white hover:border-white/70 hover:text-white/82"
-            > Department of Integrative Biology </a> 
-          and the 
-        <a 
-              href="https://eeb.msu.edu/"
-              class="group inline-flex items-center gap-2 border-b border-white pb-1 text-lg text-white hover:border-white/70 hover:text-white/82"
-            > Ecology, Evolution, & Behavior Program 
-            </a> 
+        Currently, I use species interactions to build species interaction networks in Costa Rica to understand how communities are responding to climate change.
         </p>
         <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
           <a
             href={`/blog/${featured.slug}`}
             class="group inline-flex items-center gap-2 border-b border-white pb-1 text-sm font-medium text-white hover:border-white/70 hover:text-white/82"
           >
-            Begin with this issue's lead essay
+            See the La Selva - Barva MetaNetwork
             <Icon name="arrow-right" class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-          </a>
-          <a href="/blog" class="text-sm text-white/76 hover:text-white">
-            Or browse the archive
           </a>
         </div>
       </div>
@@ -95,9 +77,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
   <section class="border-b border-border/60">
     <div class="mx-auto max-w-6xl px-5 py-16">
       <div class="mb-6 flex items-center justify-between">
-        <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">Featured</div>
-        <a href="/blog" class="text-xs text-muted-foreground hover:text-foreground">All writing &rarr;</a>
-      </div>
+        <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">About me</div>
       <article class="grid gap-10 lg:grid-cols-2">
         <a href={`/blog/${featured.slug}`} class="group block" aria-label={`Read ${featured.title}`}>
           <div class="aspect-[4/3] overflow-hidden rounded-md bg-muted">
