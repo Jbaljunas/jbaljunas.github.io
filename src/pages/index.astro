@@ -76,8 +76,9 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
 
   <section class="border-b border-border/60">
     <div class="mx-auto max-w-6xl px-5 py-16">
-      <div class="mb-6 flex items-center justify-between">
+      <div class="mb-6 flex items-center justify-left">
         <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">About me</div>
+      </div>
       <article class="grid gap-10 lg:grid-cols-2">
         <a href={`/blog/${featured.slug}`} class="group block" aria-label={`Read ${featured.title}`}>
           <div class="aspect-[4/3] overflow-hidden rounded-md bg-muted">
