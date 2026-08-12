@@ -86,7 +86,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
             <Image
               src={BioPic}
               alt="Jenna Baljunas"
-              class="mx-auto h-auto w-3/4 object-contain"
+              class="mx-auto h-auto w-2/3 object-contain"
               width={720}
               widths={[372, 560, 720]}
               sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
@@ -96,20 +96,8 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
           )
         }      
         <div class="flex flex-col justify-center">
-          <div class="flex items-center gap-3 text-xs uppercase tracking-wider text-muted-foreground">
-            {
-              featuredCategory && (
-                <a href={`/categories/${featuredCategory.slug}`} class="inline-flex min-h-9 items-center text-primary hover:underline">
-                  {featuredCategory.name}
-                </a>
-              )
-            }
-            <span>&middot;</span>
-            <time datetime={featured.date}>{formatDate(featured.date)}</time>
-          </div>
-          <a href={`/blog/${featured.slug}`} class="mt-2 block py-1">
             <h2 class="font-serif text-3xl font-semibold leading-tight hover:text-primary sm:text-4xl">
-              {featured.title}
+              Welcome!
             </h2>
           </a>
           <p class="mt-4 text-lg text-muted-foreground">{featured.excerpt}</p>
