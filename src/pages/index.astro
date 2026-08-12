@@ -81,22 +81,20 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
         <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">About me</div>
       </div>
       <article class="grid gap-10 lg:grid-cols-2">
-        <a href={`/blog/${featured.slug}`} class="group block" aria-label={`Read ${featured.title}`}>
-  {
-    BioPic && (
-      <Image
-        src={BioPic}
-        alt="Jenna Baljunas"
-        class="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
-        width={720}
-        widths={[372, 560, 720]}
-        sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
-        format="webp"
-        quality={64}
-      />
-    )
-  }
-</a>
+        {
+          BioPic && (
+            <Image
+              src={BioPic}
+              alt="Jenna Baljunas"
+              class="mx-auto h-auto w-3/4 object-contain"
+              width={720}
+              widths={[372, 560, 720]}
+              sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
+              format="webp"
+              quality={64}
+            />
+          )
+        }      
         <div class="flex flex-col justify-center">
           <div class="flex items-center gap-3 text-xs uppercase tracking-wider text-muted-foreground">
             {
