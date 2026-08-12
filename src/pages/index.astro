@@ -75,56 +75,65 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
     </div>
   </section>
 
-  <section class="border-b border-border/60">
-    <div class="mx-auto max-w-6xl px-5 py-16">
-      <div class="mb-6 flex items-center justify-left">
-        <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">About me</div>
+ <section class="border-b border-border/60">
+  <div class="mx-auto max-w-6xl px-5 py-16">
+    
+    <div class="mb-6 flex items-center justify-left">
+      <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+        About me
       </div>
-      <article class="grid gap-10 lg:grid-cols-2">
-        {
-          BioPic && (
-            <Image
-              src={BioPic}
-              alt="Jenna Baljunas"
-              class="mx-auto h-auto w-2/3 object-contain"
-              width={720}
-              widths={[372, 560, 720]}
-              sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
-              format="webp"
-              quality={64}
-            />
-          )
-        }      
+    </div>
 
-        <div class="flex flex-col justify-center">
-  <h2 class="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-    Welcome!
-  </h2>
+    <article class="grid gap-10 lg:grid-cols-2">
+      
+      {
+        BioPic && (
+          <Image
+            src={BioPic}
+            alt="Jenna Baljunas"
+            class="mx-auto h-auto w-2/3 object-contain"
+            width={720}
+            widths={[372, 560, 720]}
+            sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
+            format="webp"
+            quality={64}
+          />
+        )
+      }
 
-  <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
-    Currently, I am a PhD student in the
-    <a
-      href="https://www.communityecologylab.com/"
-      class="underline decoration-primary/50 hover:decoration-primary"
-    >
-      Spatial and Community Ecology (SpaCE) Lab
-    </a>
-    at Michigan State University and a member of the
-    <a
-      href="https://integrativebiology.natsci.msu.edu/"
-      class="underline decoration-primary/50 hover:decoration-primary"
-    >
-      Department of Integrative Biology
-    </a>
-    and the
-    <a
-      href="https://eeb.msu.edu/"
-      class="underline decoration-primary/50 hover:decoration-primary"
-    >
-      Ecology, Evolution, and Behavior Program
-    </a>.
-  </p>
-</div>
+      <div class="flex flex-col justify-center">
+        <h2 class="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+          Welcome!
+        </h2>
+
+        <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
+          Currently, I am a PhD student in the{" "}
+          <a
+            href="https://www.communityecologylab.com/"
+            class="underline decoration-primary/50 hover:decoration-primary"
+          >
+            Spatial and Community Ecology (SpaCE) Lab
+          </a>{" "}
+          at Michigan State University and a member of the{" "}
+          <a
+            href="https://integrativebiology.natsci.msu.edu/"
+            class="underline decoration-primary/50 hover:decoration-primary"
+          >
+            Department of Integrative Biology
+          </a>{" "}
+          and the{" "}
+          <a
+            href="https://eeb.msu.edu/"
+            class="underline decoration-primary/50 hover:decoration-primary"
+          >
+            Ecology, Evolution, and Behavior Program
+          </a>.
+        </p>
+      </div>
+
+    </article>
+  </div>
+</section>
 
   <section class="mx-auto max-w-6xl px-5 py-16" data-home-latest>
     <div class="flex flex-wrap items-center justify-between gap-4">
