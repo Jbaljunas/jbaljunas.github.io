@@ -5,7 +5,9 @@ import PostCard from "../components/PostCard.astro";
 import Newsletter from "../components/Newsletter.astro";
 import Icon from "../components/Icon.astro";
 import background from "../assets/orchid.jpeg";
-import BioPic from "../assets/Bio_pic.JPG"
+import BioPic from "../assets/Bio_pic.JPG";
+import IBIO from "../assets/IBIO_logo.png";
+import EEB from "../assets/EEB_logo.png"
 import {
   SITE,
   categories,
@@ -129,7 +131,19 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
             Ecology, Evolution, and Behavior Program
           </a>.
         </p>
-      </div>
+          <div class="mt-8 flex items-center gap-6">
+            <Image
+              src={IBIO}
+              alt="IBIO"
+              class="h-16 w-auto object-contain"
+            />
+          
+            <Image
+              src={EEB}
+              alt="EEB"
+              class="h-16 w-auto object-contain"
+            />
+          </div>
 
     </article>
   </div>
