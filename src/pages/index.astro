@@ -96,29 +96,34 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
           )
         }      
         <div class="flex flex-col justify-center">
-            <h2 class="font-serif text-3xl font-semibold leading-tight hover:text-primary sm:text-4xl">
-              Welcome!
-            </h2>
-          </a>
-          <p class="mt-4 text-lg text-muted-foreground">{featured.excerpt}</p>
-          <div class="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
-            {
-              featuredAuthor && (
-                <>
-                  <img
-                    src={featuredAuthor.avatar}
-                    alt=""
-                    width="28"
-                    height="28"
-                    class="h-7 w-7 rounded-full"
-                  />
-                  <a href={`/authors/${featuredAuthor.slug}`} class="hover:text-foreground">{featuredAuthor.name}</a>
-                  <span>&middot;</span>
-                </>
-              )
-            }
-            <span>{featured.readingTime} min read</span>
-          </div>
+  <h2 class="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+    Welcome!
+  </h2>
+
+  <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
+    Currently, I am a PhD student in the
+    <a
+      href="https://www.communityecologylab.com/"
+      class="underline decoration-primary/50 hover:decoration-primary"
+    >
+      Spatial and Community Ecology (SpaCE) Lab
+    </a>
+    at Michigan State University and a member of the
+    <a
+      href="https://integrativebiology.natsci.msu.edu/"
+      class="underline decoration-primary/50 hover:decoration-primary"
+    >
+      Department of Integrative Biology
+    </a>
+    and the
+    <a
+      href="https://eeb.msu.edu/"
+      class="underline decoration-primary/50 hover:decoration-primary"
+    >
+      Ecology, Evolution, and Behavior Program
+    </a>.
+  </p>
+</div>
           <a href={`/blog/${featured.slug}`} class="mt-6 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
             Read the essay <Icon name="arrow-right" class="h-3.5 w-3.5" />
           </a>
