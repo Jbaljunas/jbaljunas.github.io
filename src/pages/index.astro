@@ -93,7 +93,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
           <Image
             src={BioPic}
             alt="Jenna Baljunas"
-            class="mx-auto h-auto w-2/3 object-contain"
+            class="mx-auto h-auto w-1/2 object-contain"
             width={720}
             widths={[372, 560, 720]}
             sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
@@ -116,7 +116,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
           >
             Spatial and Community Ecology (SpaCE) Lab
           </a>{" "}
-          at Michigan State University and a member of the{" "}
+          and a member of the{" "}
           <a
             href="https://integrativebiology.natsci.msu.edu/"
             class="underline decoration-gray-400/60 hover:decoration-gray-400"
@@ -128,10 +128,11 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
             href="https://eeb.msu.edu/"
             class="underline decoration-gray-400/60 hover:decoration-gray-400"
           >
-            Ecology, Evolution, and Behavior Program
+            Ecology, Evolution, and Behavior Program at Michigan State University.
           </a>.
         </p>
-          <div class="mt-8 flex items-center gap-6">
+
+        <div class="mt-8 flex items-center gap-6">
             <Image
               src={IBIO}
               alt="IBIO"
