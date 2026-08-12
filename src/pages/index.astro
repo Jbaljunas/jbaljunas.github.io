@@ -95,6 +95,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
             />
           )
         }      
+
         <div class="flex flex-col justify-center">
   <h2 class="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
     Welcome!
@@ -124,13 +125,6 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
     </a>.
   </p>
 </div>
-          <a href={`/blog/${featured.slug}`} class="mt-6 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
-            Read the essay <Icon name="arrow-right" class="h-3.5 w-3.5" />
-          </a>
-        </div>
-      </article>
-    </div>
-  </section>
 
   <section class="mx-auto max-w-6xl px-5 py-16" data-home-latest>
     <div class="flex flex-wrap items-center justify-between gap-4">
