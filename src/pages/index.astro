@@ -93,7 +93,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
           <Image
             src={BioPic}
             alt="Jenna Baljunas"
-            class="mx-auto h-auto w-1/2 object-contain"
+            class="mx-auto h-auto w-2/3 object-contain"
             width={720}
             widths={[372, 560, 720]}
             sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
@@ -132,19 +132,31 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
           </a> at Michigan State University.
         </p>
 
-        <div class="mt-8 flex items-center gap-6">
+        <div class="mt-8 flex items-center justify-center gap-6">
+          <a
+            href="https://integrativebiology.natsci.msu.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src={IBIO}
               alt="IBIO"
-              class="h-30 w-30 rounded-full object-cover"
+              class="h-16 w-16 rounded-full object-cover transition-opacity hover:opacity-75"
             />
-          
+          </a>
+        
+          <a
+            href="https://eeb.msu.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src={EEB}
               alt="EEB"
-              class="h-30 w-30 rounded-full object-cover"
+              class="h-16 w-16 rounded-full object-cover transition-opacity hover:opacity-75"
             />
-          </div>
+          </a>
+        </div>
       </div>
 
     </article>
