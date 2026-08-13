@@ -1,100 +1,58 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Breadcrumbs from "../components/Breadcrumbs.astro";
-import { SITE, authors } from "../lib/blog-data.js";
 ---
 
-<BaseLayout
-  title= "Research"
->
+<BaseLayout title="Research">
 
-<section class="border-b border-border/60">
-  <div class="mx-auto max-w-6xl px-5 py-16">
+  <section class="border-b border-border/60">
+    <div class="mx-auto max-w-6xl px-5 py-16">
 
-    <article class="grid gap-10 lg:grid-cols-2">
-      
+      <article class="grid gap-10 lg:grid-cols-2">
 
-      <div class="flex flex-col justify-center">
-        <h2 class="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-          About me
-        </h2>
+        <div class="flex flex-col justify-center">
+          <h2 class="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+            About me
+          </h2>
 
-        <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
-
+          <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
             Hi, I'm Jenna! Right now, I'm a PhD student in the{" "}
-          <a
-            href="https://www.communityecologylab.com/"
-            class="underline decoration-gray-400/60 hover:decoration-gray-400"
-          >
-            Spatial and Community Ecology (SpaCE) Lab
-          </a>{" "}
-          and a member of the{" "}
-          <a
-            href="https://integrativebiology.natsci.msu.edu/"
-            class="underline decoration-gray-400/60 hover:decoration-gray-400"
-          >
-            Department of Integrative Biology
-          </a>{" "}
-          and the{" "}
-          <a
-            href="https://eeb.msu.edu/"
-            class="underline decoration-gray-400/60 hover:decoration-gray-400"
-          >
-            Ecology, Evolution, and Behavior Program
-          </a> at Michigan State University.
-      </p>
+            <a
+              href="https://www.communityecologylab.com/"
+              class="underline decoration-gray-400/60 hover:decoration-gray-400"
+            >
+              Spatial and Community Ecology (SpaCE) Lab
+            </a>{" "}
+            and a member of the{" "}
+            <a
+              href="https://integrativebiology.natsci.msu.edu/"
+              class="underline decoration-gray-400/60 hover:decoration-gray-400"
+            >
+              Department of Integrative Biology
+            </a>{" "}
+            and the{" "}
+            <a
+              href="https://eeb.msu.edu/"
+              class="underline decoration-gray-400/60 hover:decoration-gray-400"
+            >
+              Ecology, Evolution, and Behavior Program
+            </a>{" "}
+            at Michigan State University.
+          </p>
 
-       <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
+          <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
+            How species interact with each other and the environment around
+            them has always been an interest of mine. My first experiences in
+            community ecology were based in tropical systems, which not only
+            taught me how important species interactions are to the stability
+            and function in these regions but also started a growing passion
+            for me to help fill large gaps in our knowledge of tropical
+            biodiversity.
+          </p>
+        </div>
 
-          How species interact with each other and the environment around them has always been an interest of mine. My first experiences in community ecology were based in tropical systems, 
-          which not only taught me how important species interactions are to the stability and function in these regions but also started a growing passion for me to help fill large gaps in our knowledge of tropical biodiversity.
+      </article>
 
-        </p>
-      </div>
-
-  </article>
-  </div>
-
-  <div class="mx-auto max-w-3xl px-5 py-12">
-    <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "About" }]} />
-
-    <header class="mt-6">
-      <div class="text-xs font-medium uppercase tracking-[0.2em] text-primary">About</div>
-      <h1 class="mt-2 font-serif text-5xl font-semibold leading-[1.05]">
-        A quiet magazine for the open web.
-      </h1>
-    </header>
-
-    <div class="prose-article mt-10">
-      <p>
-        {SITE.name} began as a folder of notes, drafts, and half-finished essays &mdash; the kind of writing that doesn't survive the timeline. We started publishing it here because we wanted somewhere slower to read, and somewhere slower to write.
-      </p>
-      <p>
-        The magazine is independent, occasional, and unsponsored. We publish when the work is ready and not before. There are no trackers, no pop-ups, and no infinite scroll. Just sentences, photographs, and the occasional conversation.
-      </p>
-      <h2 id="what-we-publish">What we publish</h2>
-      <p>
-        Essays on writing, design, and the craft of the web. Field notes from places we love. Interviews with people who make things with their hands. The occasional photograph, when one is worth printing.
-      </p>
-      <h2 id="who-we-are">Who we are</h2>
-      <p>A small editorial team, scattered across three time zones, who would rather be reading.</p>
     </div>
+  </section>
 
-    <section class="mt-12 border-t border-border pt-10">
-      <h2 class="font-serif text-2xl font-semibold">Contributors</h2>
-      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {
-          authors.map((author) => (
-            <a href={`/authors/${author.slug}`} class="group flex items-start gap-3">
-              <img src={author.avatar} alt="" width="48" height="48" class="h-12 w-12 rounded-full" />
-              <div>
-                <div class="font-serif text-base font-semibold group-hover:text-primary">{author.name}</div>
-                <div class="mt-1 text-sm text-muted-foreground">{author.bio}</div>
-              </div>
-            </a>
-          ))
-        }
-      </div>
-    </section>
-  </div>
 </BaseLayout>
