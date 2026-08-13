@@ -10,20 +10,6 @@ import { SITE, authors } from "../lib/blog-data.js";
 
     <article class="grid gap-10 lg:grid-cols-2">
       
-      {
-        BioPic && (
-          <Image
-            src={BioPic}
-            alt="Jenna Baljunas"
-            class="mx-auto h-auto w-2/3 object-contain"
-            width={720}
-            widths={[372, 560, 720]}
-            sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
-            format="webp"
-            quality={64}
-          />
-        )
-      }
 
       <div class="flex flex-col justify-center">
         <h2 class="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
@@ -61,32 +47,6 @@ import { SITE, authors } from "../lib/blog-data.js";
           which not only taught me how important species interactions are to the stability and function in these regions but also started a growing passion for me to help fill large gaps in our knowledge of tropical biodiversity.
 
         </p>
-
-        <div class="mt-8 flex items-center justify-center gap-8">
-          <a
-            href="https://integrativebiology.natsci.msu.edu/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={IBIO}
-              alt="IBIO"
-              class="h-43 w-43 rounded-full object-cover transition-opacity hover:opacity-75"
-            />
-          </a>
-        
-          <a
-            href="https://eeb.msu.edu/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={EEB}
-              alt="EEB"
-              class="h-43 w-43 rounded-full object-cover transition-opacity hover:opacity-75"
-            />
-          </a>
-        </div>
       </div>
 
   <div class="mx-auto max-w-3xl px-5 py-12">
