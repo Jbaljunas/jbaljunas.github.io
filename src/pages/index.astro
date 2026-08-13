@@ -79,12 +79,6 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
 
  <section class="border-b border-border/60">
   <div class="mx-auto max-w-6xl px-5 py-16">
-    
-    <div class="mb-6 flex items-center justify-left">
-      <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-        About me
-      </div>
-    </div>
 
     <article class="grid gap-10 lg:grid-cols-2">
       
@@ -105,11 +99,12 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
 
       <div class="flex flex-col justify-center">
         <h2 class="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-          Welcome!
+          I've always been interested in how species interact with the environment around them, as well as with each other.
         </h2>
 
         <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
-          I am a PhD student in the{" "}
+
+            I am a PhD student in the{" "}
           <a
             href="https://www.communityecologylab.com/"
             class="underline decoration-gray-400/60 hover:decoration-gray-400"
@@ -141,7 +136,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
             <Image
               src={IBIO}
               alt="IBIO"
-              class="h-45 w-45 rounded-full object-cover transition-opacity hover:opacity-75"
+              class="h-43 w-43 rounded-full object-cover transition-opacity hover:opacity-75"
             />
           </a>
         
@@ -153,10 +148,11 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
             <Image
               src={EEB}
               alt="EEB"
-              class="h-45 w-45 rounded-full object-cover transition-opacity hover:opacity-75"
+              class="h-43 w-43 rounded-full object-cover transition-opacity hover:opacity-75"
             />
           </a>
         </div>
+
       </div>
 
     </article>
