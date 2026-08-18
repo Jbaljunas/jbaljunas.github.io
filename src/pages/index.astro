@@ -164,3 +164,42 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
     </article>
   </div>
 </section>
+
+
+
+  <Newsletter />
+</BaseLayout>
+
+<script>
+  const latest = document.querySelector("[data-home-latest]");
+  if (latest) {
+    const buttons = [...latest.querySelectorAll("[data-home-filter]")];
+    const cards = [...latest.querySelectorAll("[data-post-card]")];
+    const empty = latest.querySelector("[data-home-empty]");
+    const activeClasses = ["border-foreground", "bg-foreground", "text-background"];
+    const inactiveClasses = ["border-border", "text-muted-foreground", "hover:text-foreground"];
+
+    const setActive = (button, active) => {
+      button.classList.toggle(activeClasses[0], active);
+      button.classList.toggle(activeClasses[1], active);
+      button.classList.toggle(activeClasses[2], active);
+      inactiveClasses.forEach((className) => button.classList.toggle(className, !active));
+    };
+
+    const filterCards = (category) => {
+      let visible = 0;
+      cards.forEach((card) => {
+        const match = !category || card.dataset.category === category;
+        const show = match && visible < 6;
+        card.hidden = !show;
+        if (match) visible += 1;
+      });
+      if (empty) empty.hidden = visible > 0;
+      buttons.forEach((button) => setActive(button, button.dataset.homeFilter === category));
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => filterCards(button.dataset.homeFilter || ""));
+    });
+  }
+</script>
