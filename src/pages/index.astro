@@ -44,8 +44,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
       format="webp"
       quality={50}
     />
-
-     <div
+    <div
       aria-hidden="true"
       class="absolute inset-0 bg-[linear-gradient(90deg,oklch(0.1_0.02_70_/_0.68),oklch(0.16_0.02_80_/_0.38)_46%,oklch(0.98_0.01_90_/_0.1))] dark:bg-[linear-gradient(90deg,oklch(0.08_0.01_70_/_0.78),oklch(0.08_0.01_70_/_0.52)_48%,oklch(0.08_0.01_70_/_0.18))]"
     />
@@ -57,7 +56,6 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
       aria-hidden="true"
       class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/72 to-transparent"
     />
-
     <div class="relative mx-auto flex min-h-[calc(100svh-6rem)] max-w-6xl items-center px-5 py-20 sm:min-h-[680px] sm:py-24">
       <div class="max-w-4xl text-white drop-shadow-[0_1px_18px_rgba(0,0,0,0.28)]">
         <h1 class="font-serif text-[2.5rem] font-medium leading-[1.02] sm:text-6xl lg:text-7xl">
@@ -77,15 +75,13 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
         </div>
       </div>
     </div>
-</section>
-
-    
+  </section>
 
  <section class="border-b border-border/60">
   <div class="mx-auto max-w-6xl px-5 py-16">
 
     <article class="grid gap-10 lg:grid-cols-2">
-      
+
       {
         BioPic && (
           <Image
@@ -150,7 +146,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
               class="h-43 w-43 rounded-full object-cover transition-opacity hover:opacity-75"
             />
           </a>
-        
+
           <a
             href="https://eeb.msu.edu/"
             target="_blank"
