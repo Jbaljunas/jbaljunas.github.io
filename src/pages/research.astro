@@ -29,13 +29,13 @@ import REU_pic from "../assets/trees.JPG";
           </h2>
 
           <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
-            I studied long-term salinatization and alkalinization of freshwater within the Chesapeake Bay watershed
+            I studied long-term salinatization and alkalinization of freshwater within the Chesapeake Bay watershed using the {" "}
             <a
               href="https://datahub.chesapeakebay.net/"
               class="underline decoration-gray-400/60 hover:decoration-gray-400"
             >
             EPA Chesapeake Bay Program water quality monitoring network
-            </a>
+            </a> {" "}
             with
             <a
               href="https://kaushallab.wixsite.com/kaushallab"
@@ -57,20 +57,20 @@ import REU_pic from "../assets/trees.JPG";
           </p>
         </div>
 
-    {
-        CB_pic && (
-          <Image
-            src={CB_pic}
-            alt="CB"
-            class="mx-auto h-auto w-2/3 object-contain"
-            width={720}
-            widths={[372, 560, 720]}
-            sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
-            format="webp"
-            quality={64}
-          />
-        )
-      }
+        {
+      CB_pic && (
+        <Image
+          src={CB_pic}
+          alt="CB"
+          class="mx-auto h-auto w-full object-contain"
+          width={1200}
+          widths={[640, 960, 1200]}
+          sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
+          format="webp"
+          quality={64}
+        />
+      )
+    }
 
       </article>
 
