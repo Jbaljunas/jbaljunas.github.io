@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import background2 from "../assets/HOWA.JPG";
+import REU_pic from "../assets/trees.JPG";
 ---
 
 <BaseLayout title="Research">
@@ -25,7 +26,11 @@ import background2 from "../assets/HOWA.JPG";
       aria-hidden="true"
       class="absolute inset-0 bg-[linear-gradient(90deg,oklch(0.1_0.02_70_/_0.68),oklch(0.16_0.02_80_/_0.38)_46%,oklch(0.98_0.01_90_/_0.1))] dark:bg-[linear-gradient(90deg,oklch(0.08_0.01_70_/_0.78),oklch(0.08_0.01_70_/_0.52)_48%,oklch(0.08_0.01_70_/_0.18))]"
     />
-  
+    <div
+      aria-hidden="true"
+      class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/45 via-black/18 to-transparent"
+    />
+
     <div
       aria-hidden="true"
       class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/45 via-black/18 to-transparent"
@@ -43,6 +48,21 @@ import background2 from "../assets/HOWA.JPG";
  <section class="border-b border-border/60">
   <div class="mx-auto max-w-6xl px-5 py-16">
       <article class="grid gap-10 lg:grid-cols-2">
+
+      {
+        BioPic && (
+          <Image
+            src={REU_pic}
+            alt="REU"
+            class="mx-auto h-auto w-2/3 object-contain"
+            width={720}
+            widths={[372, 560, 720]}
+            sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
+            format="webp"
+            quality={64}
+          />
+        )
+      }
 
         <div class="flex flex-col justify-center">
           <h2 class="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
