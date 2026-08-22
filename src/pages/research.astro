@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Icon from "../components/Icon.astro";
 import background2 from "../assets/HOWA.JPG";
+import CB_pic from "../assets/CB.png";
 import REU_pic from "../assets/trees.JPG";
 ---
 
@@ -11,12 +12,72 @@ import REU_pic from "../assets/trees.JPG";
   <section class="relative -mt-[calc(4rem+2px)] min-h-[400px] overflow-hidden border-b border-border/60 pt-[calc(4rem+2px)] sm:min-h-[200px]">
   <div class="relative mx-auto flex min-h-[400px] max-w-6xl items-center px-5 py-20 sm:min-h-[200px]">
     <div class="max-w-4xl text-black">
-      <h1 class="font-serif text-[2.5rem] font-medium leading-[1.02] sm:text-6xl lg:text-7xl">
+      <h1 class="font-serif text-3xl font-semibold leading-tight sm:text-6xl lg:text-7xl">
         Research
       </h1>
     </div>
   </div>
 </section>
+
+<section class="border-b border-border/60">
+  <div class="mx-auto max-w-6xl px-5 py-16">
+      <article class="grid gap-10 lg:grid-cols-2">
+
+        <div class="flex flex-col justify-center">
+          <h2 class="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+            Long-term Human Perturbations on the Chesapeake Bay
+          </h2>
+
+          <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
+            I studied long-term salinatization and alkalinization of freshwater within the Chesapeake Bay watershed
+            <a
+              href="https://datahub.chesapeakebay.net/"
+              class="underline decoration-gray-400/60 hover:decoration-gray-400"
+            >
+            EPA Chesapeake Bay Program water quality monitoring network
+            </a>
+            with
+            <a
+              href="https://kaushallab.wixsite.com/kaushallab"
+              class="underline decoration-gray-400/60 hover:decoration-gray-400"
+            >
+            Sujay Kaushal
+            </a> {" "}
+            of the University of Maryland.
+          </p>
+
+        <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
+          <a
+              href="https://link.springer.com/article/10.1007/s10533-025-01219-6"
+              class="group inline-flex items-center gap-2 border-b border-white pb-1 text-sm font-medium text-black hover:border-black/70 hover:text-black/82"
+            >
+              Freshwater faces a warmer and saltier future from headwaters to coasts: climate risks, saltwater intrusion, and biogeochemical chain reactions
+              <Icon name="arrow-right" class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            </a>
+          </p>
+        </div>
+
+    {
+        CB_pic && (
+          <Image
+            src={CB_pic}
+            alt="CB"
+            class="mx-auto h-auto w-2/3 object-contain"
+            width={720}
+            widths={[372, 560, 720]}
+            sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
+            format="webp"
+            quality={64}
+          />
+        )
+      }
+
+      </article>
+
+    </div>
+
+  </section>
+
 
  <section class="border-b border-border/60">
   <div class="mx-auto max-w-6xl px-5 py-16">
