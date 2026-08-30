@@ -23,6 +23,7 @@ export const NAVIGATION = [
 export const CONTACT = {
   email: "baljunas@msu.edu",
   orcid: "https://orcid.org/0009-0001-7197-2654",
+  git: "https://github.com/Jbaljunas",
 };
 
 export const FORMS = {
@@ -41,7 +42,7 @@ export const FORMS = {
 export const SOCIAL_LINKS = [
   { href: `mailto:${CONTACT.email}`, label: "Email", icon: "mail" },
   {href: CONTACT.orcid, label: "ORCID", icon: "orcid"},
-  { href: SITE.repositoryUrl, label: `${SITE.name} on GitHub`, icon: "github" },
+  { href: CONTACT.git, label: `${SITE.name} on GitHub`, icon: "github" },
 ];
 export const authors = [
   {
