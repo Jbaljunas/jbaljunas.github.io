@@ -22,8 +22,7 @@ export const NAVIGATION = [
 
 export const CONTACT = {
   email: "baljunas@msu.edu",
-  socialHandle: "@quietpages",
-  socialUrl: "https://x.com/quietpages",
+  orcid: "https://orcid.org/0009-0001-7197-2654",
 };
 
 export const FORMS = {
@@ -40,10 +39,9 @@ export const FORMS = {
 };
 
 export const SOCIAL_LINKS = [
-  { href: "/rss.xml", label: "RSS feed", icon: "rss" },
-  { href: CONTACT.socialUrl, label: `${SITE.name} on X`, icon: "twitter" },
+  {{ href: `mailto:${CONTACT.email}`, label: "Email", icon: "mail" },
+   {href: CONTACT.orcid, label: "ORCID", icon: "orcid"},
   { href: SITE.repositoryUrl, label: `${SITE.name} on GitHub`, icon: "github" },
-  { href: `mailto:${CONTACT.email}`, label: "Email", icon: "mail" },
 ];
 export const authors = [
   {
