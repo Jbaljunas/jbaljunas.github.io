@@ -4,7 +4,7 @@ import { SITE } from "../lib/blog-data.js";
 import { NAVIGATION } from "../config/theme.config.ts";
 
 const current = Astro.url.pathname.replace(/\/$/, "") || "/";
-const isHome = current === "/" || current === "/research";
+const isHome = current === "/";
 const activeClass = isHome ? "home-header-link is-active" : "text-foreground";
 const inactiveClass = isHome
   ? "home-header-link"
