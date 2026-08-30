@@ -1,16 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
+import CV from "../documents/Baljunas_CV_2026.pdf";
 ---
 
 <BaseLayout title="CV">
 
-<section class="relative -mt-[calc(4rem+2px)] min-h-[calc(100svh-2rem)] overflow-hidden border-b border-border/60 pt-[calc(4rem+2px)] sm:min-h-[760px]">
-     <iframe
-    src="/documents/Baljunas_CV_2026.pdf"
-    class="h-[800px] w-full border-0"
-   ></iframe>
+  <section class="min-h-screen border-b border-border/60">
+    <div class="mx-auto max-w-6xl px-5 py-16">
+      <iframe
+        src={CV}
+        class="h-[800px] w-full border-0"
+        title="Jenna Baljunas CV"
+      ></iframe>
+    </div>
   </section>
-
 
 </BaseLayout>
