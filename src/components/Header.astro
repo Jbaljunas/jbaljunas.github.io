@@ -6,10 +6,6 @@ import { NAVIGATION } from "../config/theme.config.ts";
 
 const current = Astro.url.pathname.replace(/\/$/, "") || "/";
 
-/*
- * Use the same header behavior as the original homepage
- * for both Home and Research.
- */
 const isHome =
   current === "/" ||
   current === "/research";
@@ -52,7 +48,6 @@ const { title, description, canonical, flushFooter = false } = Astro.props;
       />
     )}
 
-    <!-- Dark mode -->
     <script is:inline>
       const savedTheme = localStorage.getItem("theme");
       const systemDark =
@@ -147,9 +142,6 @@ const { title, description, canonical, flushFooter = false } = Astro.props;
       const homeHeader =
         document.querySelector("[data-home-header]");
 
-      /*
-       * Dark mode icon
-       */
       const setThemeIcon = () => {
         const dark =
           document.documentElement.classList.contains("dark");
@@ -160,9 +152,6 @@ const { title, description, canonical, flushFooter = false } = Astro.props;
 
       setThemeIcon();
 
-      /*
-       * Dark mode toggle
-       */
       themeToggle?.addEventListener("click", () => {
         const next =
           !document.documentElement.classList.contains("dark");
@@ -178,10 +167,7 @@ const { title, description, canonical, flushFooter = false } = Astro.props;
       });
 
       /*
-       * Original homepage scroll behavior.
-       *
-       * This is intentionally kept the same as your
-       * original Header.astro.
+       * Keep the original homepage scroll behavior.
        */
       const setHeaderScrolled = () => {
         if (!homeHeader) return;
