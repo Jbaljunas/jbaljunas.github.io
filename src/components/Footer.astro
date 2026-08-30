@@ -5,6 +5,9 @@ import { SITE } from "../lib/blog-data.js";
 import { SOCIAL_LINKS } from "../config/theme.config.ts";
 import footerBackground from "../assets/IMG_1884.JPG";
 
+import orcid from "../assets/orcid.svg";
+import github from "../assets/github.svg";
+
 const { flush = false } = Astro.props;
 ---
 
@@ -29,25 +32,46 @@ const { flush = false } = Astro.props;
       {SITE.name}
     </div>
 
-    <div class="mt-6 flex items-center gap-6">
-      {
-        SOCIAL_LINKS.map((link) => (
-          <a
-            href={link.href}
-            aria-label={link.label}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="transition-opacity hover:opacity-70"
-          >
-            <Icon name={link.icon} class="h-6 w-6" />
-          </a>
-        ))
-      }
-    </div>
+    <div class="mt-4 flex items-center gap-4">
 
-    <div class="mt-8 text-xs text-white/75">
-      &copy; {new Date().getFullYear()} {SITE.name}
-    </div>
+  <a
+    href={`mailto:${CONTACT.email}`}
+    aria-label="Email"
+    class="text-muted-foreground transition-opacity hover:opacity-70"
+  >
+    <Icon name="mail" class="h-5 w-5" />
+  </a>
 
+  <a
+    href={CONTACT.orcid}
+    aria-label="ORCID"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="transition-opacity hover:opacity-70"
+  >
+    <Image
+      src={orcid}
+      alt="ORCID"
+      width={20}
+      height={20}
+    />
+  </a>
+
+  <a
+    href={SITE.repositoryUrl}
+    aria-label="GitHub"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-muted-foreground transition-opacity hover:opacity-70"
+  >
+    <Image
+      src={github}
+      alt="GitHub"
+      width={20}
+      height={20}
+    />
+  </a>
+
+</div>
   </div>
 </footer>
