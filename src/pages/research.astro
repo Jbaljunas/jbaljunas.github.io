@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Icon from "../components/Icon.astro";
-import background2 from "../assets/soltis.jpeg";
+import background from "../assets/soltis.jpeg";
 import La_selva from "../assets/forest.jpeg";
 import seed_pred from "../assets/seed_pred.jpeg";
 import CB_pic from "../assets/CB.png";
@@ -12,44 +12,47 @@ import stream from "../assets/stream.png";
 
 <BaseLayout title="Research">
 
-  <section class="relative -mt-[calc(4rem+2px)] min-h-screen overflow-hidden pt-[calc(4rem+2px)]">
-    <Image
-      src={background2}
-      alt=""
-      class="absolute inset-0 h-full w-full object-cover object-[center_65%]"
-      loading="eager"
-      fetchpriority="high"
-      decoding="async"
-      width={1600}
-      widths={[640, 960, 1280, 1600]}
-      sizes="100vw"
-      format="webp"
-      quality={50}
-    />
-    <div
-      aria-hidden="true"
-      class="absolute inset-0 bg-[linear-gradient(90deg,oklch(0.1_0.02_70_/_0.68),oklch(0.16_0.02_80_/_0.38)_46%,oklch(0.98_0.01_90_/_0.1))] dark:bg-[linear-gradient(90deg,oklch(0.08_0.01_70_/_0.78),oklch(0.08_0.01_70_/_0.52)_48%,oklch(0.08_0.01_70_/_0.18))]"
-    />
-    <div
-      aria-hidden="true"
-      class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/45 via-black/18 to-transparent"
-    />
-    <div
-      aria-hidden="true"
-      class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-background via-background/72 to-transparent"
-    />
+<section class="relative -mt-[calc(4rem+2px)] min-h-[400px] overflow-hidden border-b border-border/60 pt-[calc(4rem+2px)] sm:min-h-[450px]">
 
-    <div class="relative mx-auto flex min-h-[calc(100svh-6rem)] max-w-6xl items-center px-5 py-20 sm:min-h-[100px] sm:py-24">
-      <div class="max-w-4xl text-white drop-shadow-[0_1px_18px_rgba(0,0,0,0.28)]">
-        <h1 class="font-serif text-[2.5rem] font-medium leading-[1.02] sm:text-6xl lg:text-7xl">
+  <Image
+    src={background}
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover object-[center_65%]"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+    width={1600}
+    widths={[640, 960, 1280, 1600]}
+    sizes="100vw"
+    format="webp"
+    quality={50}
+  />
+
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 bg-[linear-gradient(90deg,oklch(0.1_0.02_70_/_0.68),oklch(0.16_0.02_80_/_0.38)_46%,oklch(0.98_0.01_90_/_0.1))]"
+  />
+
+  <div
+    aria-hidden="true"
+    class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/45 via-black/18 to-transparent"
+  />
+
+  <div class="relative mx-auto flex min-h-[400px] max-w-6xl items-center px-5 py-20 sm:min-h-[450px] sm:py-24">
+    <div class="max-w-4xl text-white drop-shadow-[0_1px_18px_rgba(0,0,0,0.28)]">
+
+      <h1 class="font-serif text-[2.5rem] font-medium leading-[1.02] sm:text-6xl lg:text-7xl">
         Research
-        </h1>
-          <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/86">
-          Explore some of my past and current projects below!
-          </p>
-      </div>
+      </h1>
+
+      <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/86">
+        Explore some of my past and current projects below!
+      </p>
+
     </div>
-  </section>
+  </div>
+
+</section>
 
 <section class="border-b border-border/60">
   <div class="mx-auto max-w-6xl px-5 py-16">
