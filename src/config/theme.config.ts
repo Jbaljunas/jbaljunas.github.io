@@ -17,7 +17,7 @@ export const SITE = {
 export const NAVIGATION = [
   { to: "/", label: "Home" },
   { to: "/research", label: "Research" },
-  { to: "/contact", label: "Contact" },
+  { to: "/cv", label: "CV" },
 ];
 
 export const CONTACT = {
