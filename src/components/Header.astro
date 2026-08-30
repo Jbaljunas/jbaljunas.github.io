@@ -18,8 +18,8 @@ const inactiveClass = isTransparent
   : "text-muted-foreground transition-colors hover:text-foreground";
 
 const headerClass = isTransparent
-  ? "absolute inset-x-0 top-0 z-40 border-b border-transparent bg-transparent text-white"
-  : "sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md";
+  ? "absolute inset-x-0 top-0 z-40 border-b border-transparent bg-transparent text-white transition-all duration-300"
+  : "sticky top-0 z-40 border-b border-border/60 bg-background/80 text-foreground backdrop-blur-md";
 
 const iconClass = isTransparent
   ? "inline-flex h-9 w-9 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10"
@@ -33,9 +33,12 @@ const { title, description, canonical, flushFooter = false } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+
     <title>{title ? `${title} | ${SITE.name}` : SITE.name}</title>
 
-    {description && <meta name="description" content={description} />}
+    {description && (
+      <meta name="description" content={description} />
+    )}
 
     {canonical && (
       <link
@@ -44,9 +47,11 @@ const { title, description, canonical, flushFooter = false } = Astro.props;
       />
     )}
 
+    <!-- Set dark mode before page renders -->
     <script is:inline>
       const savedTheme = localStorage.getItem("theme");
-      const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const systemDark =
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
 
       if (savedTheme === "dark" || (!savedTheme && systemDark)) {
         document.documentElement.classList.add("dark");
@@ -56,7 +61,10 @@ const { title, description, canonical, flushFooter = false } = Astro.props;
 
   <body class="min-h-screen bg-background text-foreground antialiased">
 
-    <header class={headerClass}>
+    <header
+      class={headerClass}
+      data-transparent={isTransparent ? "true" : "false"}
+    >
       <div class="relative mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
 
         <!-- Name -->
@@ -66,10 +74,15 @@ const { title, description, canonical, flushFooter = false } = Astro.props;
           </span>
         </a>
 
-        <nav class="flex items-center gap-8" aria-label="Primary navigation">
+        <!-- Navigation -->
+        <nav
+          class="flex items-center gap-8"
+          aria-label="Primary navigation"
+        >
           {
             NAVIGATION.map((item) => {
               const exact = item.to === "/";
+
               const active = exact
                 ? current === "/"
                 : current.startsWith(item.to);
@@ -77,7 +90,9 @@ const { title, description, canonical, flushFooter = false } = Astro.props;
               return (
                 <a
                   href={item.to}
-                  class={`text-sm ${active ? activeClass : inactiveClass}`}
+                  class={`header-link text-sm ${
+                    active ? activeClass : inactiveClass
+                  }`}
                   aria-current={active ? "page" : undefined}
                 >
                   {item.label}
@@ -109,13 +124,31 @@ const { title, description, canonical, flushFooter = false } = Astro.props;
       <slot />
     </main>
 
+    <!-- Dark mode + scrolling header -->
     <script>
-      const themeToggle = document.querySelector("[data-theme-toggle]");
-      const moonIcon = document.querySelector('[data-theme-icon="moon"]');
-      const sunIcon = document.querySelector('[data-theme-icon="sun"]');
+      const themeToggle =
+        document.querySelector("[data-theme-toggle]");
 
+      const moonIcon =
+        document.querySelector('[data-theme-icon="moon"]');
+
+      const sunIcon =
+        document.querySelector('[data-theme-icon="sun"]');
+
+      const header =
+        document.querySelector(
+          "header[data-transparent='true']"
+        );
+
+      const links =
+        header?.querySelectorAll(".header-link");
+
+      /*
+       * Update the moon/sun icon
+       */
       const setThemeIcon = () => {
-        const dark = document.documentElement.classList.contains("dark");
+        const dark =
+          document.documentElement.classList.contains("dark");
 
         if (moonIcon) moonIcon.hidden = dark;
         if (sunIcon) sunIcon.hidden = !dark;
@@ -123,14 +156,116 @@ const { title, description, canonical, flushFooter = false } = Astro.props;
 
       setThemeIcon();
 
+      /*
+       * Dark mode toggle
+       */
       themeToggle?.addEventListener("click", () => {
-        const next = !document.documentElement.classList.contains("dark");
+        const next =
+          !document.documentElement.classList.contains("dark");
 
-        document.documentElement.classList.toggle("dark", next);
-        localStorage.setItem("theme", next ? "dark" : "light");
+        document.documentElement.classList.toggle(
+          "dark",
+          next
+        );
+
+        localStorage.setItem(
+          "theme",
+          next ? "dark" : "light"
+        );
 
         setThemeIcon();
       });
+
+      /*
+       * Change transparent header when scrolling
+       */
+      const updateHeader = () => {
+        if (!header) return;
+
+        const scrolled = window.scrollY > 50;
+
+        if (scrolled) {
+
+          // Header background
+          header.classList.remove(
+            "bg-transparent",
+            "text-white",
+            "border-transparent"
+          );
+
+          header.classList.add(
+            "bg-background/80",
+            "text-foreground",
+            "border-border/60",
+            "backdrop-blur-md"
+          );
+
+          // Navigation links
+          links?.forEach((link) => {
+            link.classList.remove(
+              "home-header-link",
+              "text-white"
+            );
+
+            link.classList.add(
+              "text-muted-foreground",
+              "hover:text-foreground"
+            );
+          });
+
+          // Dark mode button
+          themeToggle?.classList.remove("text-white");
+
+          themeToggle?.classList.add(
+            "text-muted-foreground"
+          );
+
+        } else {
+
+          // Header background
+          header.classList.remove(
+            "bg-background/80",
+            "text-foreground",
+            "border-border/60",
+            "backdrop-blur-md"
+          );
+
+          header.classList.add(
+            "bg-transparent",
+            "text-white",
+            "border-transparent"
+          );
+
+          // Navigation links
+          links?.forEach((link) => {
+            link.classList.remove(
+              "text-muted-foreground",
+              "hover:text-foreground"
+            );
+
+            link.classList.add(
+              "home-header-link"
+            );
+          });
+
+          // Dark mode button
+          themeToggle?.classList.remove(
+            "text-muted-foreground"
+          );
+
+          themeToggle?.classList.add(
+            "text-white"
+          );
+        }
+      };
+
+      updateHeader();
+
+      window.addEventListener(
+        "scroll",
+        updateHeader,
+        { passive: true }
+      );
     </script>
 
   </body>
