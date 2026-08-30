@@ -7,7 +7,7 @@ const current = Astro.url.pathname.replace(/\/$/, "") || "/";
 
 const isTransparent =
   current === "/" ||
-  current === "/research" ||
+  current === "/research";
 
 const activeClass = isTransparent
   ? "home-header-link is-active"
