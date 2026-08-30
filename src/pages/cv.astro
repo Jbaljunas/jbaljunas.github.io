@@ -1,18 +1,39 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import background from "../assets/IMG_1884.JPG";
 import CV from "../documents/Baljunas_CV_2026.pdf";
 ---
 
 <BaseLayout title="CV">
 
-  <section class="min-h-screen border-b border-border/60">
-    <div class="mx-auto max-w-6xl px-5 py-16">
+  <section class="relative min-h-screen overflow-hidden border-b border-border/60">
+
+    <Image
+      src={background}
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover object-center"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      width={1600}
+      widths={[640, 960, 1280, 1600]}
+      sizes="100vw"
+      format="webp"
+      quality={50}
+    />
+
+
+    <div class="absolute inset-0 bg-black/20"></div>
+
+    <div class="relative z-10 mx-auto max-w-5xl px-5 py-16">
       <iframe
         src={CV}
-        class="h-[800px] w-full border-0"
+        class="h-[1000px] w-full border-0"
         title="Jenna Baljunas CV"
       ></iframe>
     </div>
+
   </section>
 
 </BaseLayout>
